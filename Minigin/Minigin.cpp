@@ -5,8 +5,8 @@
 #include "SceneManager.h"
 #include "Renderer.h"
 #include "ResourceManager.h"
-#include "TextObject.h"
 #include "GameObject.h"
+#include "TextComponent.h"
 #include "Scene.h"
 
 using namespace std;
@@ -57,13 +57,13 @@ void Minigin::LoadGame() const
 	auto& scene = SceneManager::GetInstance().CreateScene("Demo");
 
 	auto go = std::make_shared<GameObject>();
-	go->SetTexture("background.jpg");
+	auto font = ResourceManager::GetInstance().LoadFont("Lingua.otf", 36);
+	auto color = SDL_Color{ 255,255,255,255 };
+	go->AddComponent<TextComponent>(std::make_shared<TextComponent>(go, "Programming 4 Assignment", font,color));
+	//go->SetTexture("background.jpg");
 	scene.Add(go);
 
-	go = std::make_shared<GameObject>();
-	go->SetTexture("logo.png");
-	go->SetPosition(216, 180);
-	scene.Add(go);
+	
 
 	/*auto font = ResourceManager::GetInstance().LoadFont("Lingua.otf", 36);
 	auto to = std::make_shared<TextObject>("Programming 4 Assignment", font);
@@ -95,11 +95,35 @@ void Minigin::Run()
 
 		// todo: this update loop could use some work.
 		bool doContinue = true;
+		auto lastTime = std::chrono::high_resolution_clock::now();
+		float lag = 0.0f;
 		while (doContinue)
 		{
+			const auto currentTime = std::chrono::high_resolution_clock::now();
+			float dt = std::chrono::duration<float>(currentTime - lastTime).count();
+			// Set DeltaTime in GameTime
+			GameTime::GetInstance().SetDeltaTime(dt);
+
+			lastTime = currentTime;
+			lag += dt;
+
+
 			doContinue = input.ProcessInput();
+
+			while (lag >= MsPerFrame)
+			{
+				sceneManager.FixedUpdate();
+				lag -= MsPerFrame;
+			}
 			sceneManager.Update();
+			sceneManager.LateUpdate();
+
 			renderer.Render();
+
+			auto sleepTime = std::chrono::duration_cast<std::chrono::duration<float>>(currentTime + milliseconds(MsPerFrame) - high_resolution_clock::now());
+			std::this_thread::sleep_for(sleepTime);
+
+
 		}
 	}
 

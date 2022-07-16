@@ -3,22 +3,98 @@
 #include "ResourceManager.h"
 #include "Renderer.h"
 
+GameObject::GameObject(const std::string& name):
+	m_Name(name)
+{
+}
 GameObject::~GameObject() = default;
 
-void GameObject::Update(){}
+void GameObject::FixedUpdate()
+{
+	for (std::shared_ptr<BaseComponent> comp : m_Components)
+	{
+		comp->FixedUpdate();
+	}
+}
+
+void GameObject::Update()
+{
+	for (std::shared_ptr<BaseComponent> comp : m_Components)
+	{
+		comp->Update();
+	}
+}
+
+void GameObject::LateUpdate()
+{
+	for (std::shared_ptr<BaseComponent> comp : m_Components)
+	{
+		comp->LateUpdate();
+	}
+}
 
 void GameObject::Render() const
 {
-	const auto& pos = m_Transform.GetPosition();
-	Renderer::GetInstance().RenderTexture(*m_Texture, pos.x, pos.y);
+	for (std::shared_ptr<BaseComponent> comp : m_Components)
+	{
+		comp->Render();
+	}
 }
 
-void GameObject::SetTexture(const std::string& filename)
+void GameObject::MarkForDestruction()
 {
-	m_Texture = ResourceManager::GetInstance().LoadTexture(filename);
+	m_MarkedDestroy = true;
 }
 
+bool GameObject::IsMarkedForDestruction() const
+{
+	return m_MarkedDestroy;
+}
 void GameObject::SetPosition(float x, float y)
 {
-	m_Transform.SetPosition(x, y, 0.0f);
+	m_Transform.SetPosition(x, y, 1.f);
+}
+const Transform& GameObject::GetTransform() const
+{
+	// TODO: insert return statement here
+	return m_Transform;
+}
+void GameObject::SetName(const std::string& name)
+{
+	m_Name = name;
+}
+
+const std::string& GameObject::GetName() const
+{
+	return m_Name;
+}
+void GameObject::SetParent(GameObject* parent)
+{
+	m_Parent = parent;
+}
+
+GameObject* GameObject::GetParent() const
+{
+	return m_Parent;
+}
+
+size_t GameObject::GetChildCount() const
+{
+	return m_Children.size();
+}
+
+GameObject* GameObject::GetChildAt(int index) const
+{
+	return m_Children[index];
+}
+
+void GameObject::RemoveChild(int index)
+{
+	// check if this is the best way to remove 
+	m_Children.erase(m_Children.begin() + index);
+}
+
+void GameObject::AddChild(GameObject* go)
+{
+	m_Children.push_back(go);
 }
