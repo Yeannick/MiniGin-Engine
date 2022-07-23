@@ -27,6 +27,7 @@ public:
 	bool IsMarkedForDestruction() const;
 	
 	void SetPosition(float x, float y);
+	void SetPosition(float x, float y , float z);
 	const Transform& GetTransform() const;
 
 	void SetName(const std::string& name);

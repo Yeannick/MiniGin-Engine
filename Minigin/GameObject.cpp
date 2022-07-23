@@ -54,6 +54,10 @@ void GameObject::SetPosition(float x, float y)
 {
 	m_Transform.SetPosition(x, y, 1.f);
 }
+void GameObject::SetPosition(float x, float y, float z)
+{
+	m_Transform.SetPosition(x, y,z);
+}
 const Transform& GameObject::GetTransform() const
 {
 	// TODO: insert return statement here

@@ -2,8 +2,9 @@
 
 
 #include <memory>
-class GameObject;
+#include "DataTypes.h"
 
+class GameObject;
 class BaseComponent
 {
 public : 

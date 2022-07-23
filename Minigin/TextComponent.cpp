@@ -48,7 +48,8 @@ void TextComponent::Render()
 	{
 
 		glm::vec3 pos = m_Owner.lock()->GetTransform().GetPosition();
-		// Renderer::GetInstance().RenderTexture(*m_TextTexture, pos.x, pos.y);
+		Renderer::GetInstance().AddToRenderQueue(*m_TextTexture, pos.x, pos.y, 0, 0.01f);
+		//Renderer::GetInstance().RenderTexture(*m_TextTexture, pos.x, pos.y);
 	}
 }
 

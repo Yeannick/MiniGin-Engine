@@ -3,38 +3,98 @@
 
 bool InputManager::ProcessInput()
 {
-	ZeroMemory(&m_CurrentState, sizeof(XINPUT_STATE));
-	XInputGetState(0, &m_CurrentState);
-
-	SDL_Event e;
-	while (SDL_PollEvent(&e)) {
-		if (e.type == SDL_QUIT) {
+	while (SDL_PollEvent(&m_Event))
+	{
+		if (m_Event.type == SDL_QUIT)
+		{
 			return false;
 		}
-		if (e.type == SDL_KEYDOWN) {
-			
-		}
-		if (e.type == SDL_MOUSEBUTTONDOWN) {
-			
+		for (auto& keyCommand : m_KeyboardCommands)
+		{
+			switch (keyCommand.state)
+			{
+			case InputState::Down:
+				if (m_Event.type == SDL_KEYDOWN && !keyCommand.WasDown && m_Event.key.keysym.scancode == keyCommand.Key)
+				{
+					keyCommand.WasDown = true;
+					keyCommand.command->Execute();
+				}
+				else if (m_Event.type == SDL_KEYUP && keyCommand.WasDown && m_Event.key.keysym.scancode == keyCommand.Key)keyCommand.WasDown = false;
+				break;
+			case InputState::Up:
+				if (m_Event.type == SDL_KEYUP && m_Event.key.keysym.scancode == keyCommand.Key)
+				{
+					keyCommand.command->Execute();
+				}
+				break;
+			case InputState::Pressed:
+				if (m_Event.key.keysym.scancode == keyCommand.Key)
+				{
+					keyCommand.command->Execute();
+				}
+				break;
+			default:
+				break;
+			}
 		}
 	}
-
+	Update();
 	return true;
 }
 
-bool InputManager::IsPressed(ControllerButton button) const
+
+void InputManager::Update() const
 {
-	switch (button)
+	for (auto& controller : m_pControllers)
 	{
-	case ControllerButton::ButtonA:
-		return m_CurrentState.Gamepad.wButtons & XINPUT_GAMEPAD_A;
-	case ControllerButton::ButtonB:
-		return m_CurrentState.Gamepad.wButtons & XINPUT_GAMEPAD_B;
-	case ControllerButton::ButtonX:
-		return m_CurrentState.Gamepad.wButtons & XINPUT_GAMEPAD_X;
-	case ControllerButton::ButtonY:
-		return m_CurrentState.Gamepad.wButtons & XINPUT_GAMEPAD_Y;
-	default: return false;
+		controller->Update();
 	}
 }
 
+PlayerIdx InputManager::AddPlayer()
+{
+	PlayerIdx idx = static_cast<int>(m_pControllers.size());
+	m_pControllers.push_back(std::make_unique<Controller>(idx));
+	return idx;
+}
+void InputManager::RemovePlayer(PlayerIdx idx)
+{
+	if (idx > m_pControllers.size())
+	{
+		std::cout << " Can't remove player with Idx " << idx << " , index to high\n";
+		return;
+	}
+	else
+	{
+		for (size_t i = 0; i < m_ControllerCommands.size(); i++)
+		{
+			if (m_ControllerCommands[i].controllerIdx == idx)
+			{
+				m_ControllerCommands.erase(m_ControllerCommands.begin() + i);
+			}
+		}
+		m_pControllers.erase(m_pControllers.begin() + idx);
+	}
+
+	
+}
+bool InputManager::IsPressed(Controller::ControllerButton button, PlayerIdx idx)const
+{
+	return m_pControllers[idx]->IsPressed(button);
+}
+bool InputManager::IsPressed(SDL_Scancode code)const
+{
+	const Uint8* state = SDL_GetKeyboardState(nullptr);
+	return state[code];
+}
+
+bool InputManager::IsDown(Controller::ControllerButton button, PlayerIdx idx)
+{
+	return m_pControllers[idx]->IsDown(button);
+}
+
+bool InputManager::IsUp(Controller::ControllerButton button, PlayerIdx idx)
+{
+	return m_pControllers[idx]->IsUp(button);
+
+}

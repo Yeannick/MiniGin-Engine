@@ -7,9 +7,14 @@
 #include "ResourceManager.h"
 #include "GameObject.h"
 #include "TextComponent.h"
+#include "SpriteComponent.h"
 #include "Scene.h"
+#include "GameTime.h"
+#include <chrono>
+
 
 using namespace std;
+using namespace std::chrono;
 
 void PrintSDLVersion()
 {
@@ -56,19 +61,26 @@ void Minigin::LoadGame() const
 {
 	auto& scene = SceneManager::GetInstance().CreateScene("Demo");
 
-	auto go = std::make_shared<GameObject>();
-	auto font = ResourceManager::GetInstance().LoadFont("Lingua.otf", 36);
-	auto color = SDL_Color{ 255,255,255,255 };
-	go->AddComponent<TextComponent>(std::make_shared<TextComponent>(go, "Programming 4 Assignment", font,color));
-	//go->SetTexture("background.jpg");
-	scene.Add(go);
-
 	
 
+	auto bground = std::make_shared<GameObject>();
+
+	bground->AddComponent<SpriteComponent>(std::make_shared<SpriteComponent>(bground));
+	bground->SetPosition(0, 0, 0.2f);
+	auto sprite = bground->GetComponent<SpriteComponent>();
+	sprite.lock()->SetTexture("background.jpg");
+	sprite.lock()->SetSpriteRect(0,0,640,480);
+	scene.Add(bground);
 	/*auto font = ResourceManager::GetInstance().LoadFont("Lingua.otf", 36);
 	auto to = std::make_shared<TextObject>("Programming 4 Assignment", font);
 	to->SetPosition(80, 20);
 	scene.Add(to);*/
+	auto go = std::make_shared<GameObject>();
+	auto font = ResourceManager::GetInstance().LoadFont("Lingua.otf", 36);
+	auto color = SDL_Color{ 255,255,255,255 };
+	go->AddComponent<TextComponent>(std::make_shared<TextComponent>(go, "Programming 4 Assignment", font, color));
+
+	scene.Add(go);
 }
 
 void Minigin::Cleanup()

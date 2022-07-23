@@ -2,11 +2,27 @@
 #include "SceneManager.h"
 #include "Scene.h"
 
+void SceneManager::FixedUpdate()
+{
+	for (auto& scene : m_Scenes)
+	{
+		scene->FixedUpdate();
+	}
+}
+
 void SceneManager::Update()
 {
 	for(auto& scene : m_Scenes)
 	{
 		scene->Update();
+	}
+}
+
+void SceneManager::LateUpdate()
+{
+	for (auto& scene : m_Scenes)
+	{
+		scene->LateUpdate();
 	}
 }
 
