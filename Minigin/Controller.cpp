@@ -1,10 +1,12 @@
 #include "MiniginPCH.h"
-
-
+/*
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #pragma comment(lib,"xinput.lib")
 
+// including Xinput.h before Windows.h gaveme the Error "# Error : "No Target Architecture" "
+
+*/
 #include "Controller.h"
 
 class Controller::ControllerImpl

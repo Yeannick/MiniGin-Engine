@@ -10,7 +10,7 @@ class TextComponent : public BaseComponent
 {
 public :
 	TextComponent(const std::weak_ptr<GameObject>& owner, const std::string text, const std::shared_ptr<Font> font, const SDL_Color color);
-
+	TextComponent(const std::weak_ptr<GameObject>& owner);
 	virtual void FixedUpdate() override;
 	virtual void Update() override;
 	virtual void LateUpdate() override;
@@ -22,7 +22,8 @@ public :
 private: 
 	std::string m_Text;
 	std::shared_ptr<Font> m_Font;
-	SDL_Color m_Color;
+	SDL_Color m_Color = { 255,255,255 };;
 	std::shared_ptr<Texture2D> m_TextTexture;
 };
+
 

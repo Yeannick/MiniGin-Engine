@@ -2,6 +2,7 @@
 #include "Renderer.h"
 #include "SceneManager.h"
 #include "Texture2D.h"
+#include "Font.h"
 #include <algorithm>
 
 int GetOpenGLDriverIndex()
@@ -89,7 +90,30 @@ void Renderer::RenderTexture(const Texture2D& texture, float4 srcRect, float4 ds
 
 }
 
-void Renderer::AddToRenderQueue(const Texture2D& texture, const SDL_Rect& src, const SDL_Rect& dst, const SDL_Point& center, float rotation, float depth, bool flipped)
+void Renderer::RenderTexture(const Texture2D& texture, SDL_Rect srcRect, SDL_Rect dstRect, bool isFlipped) const
+{
+	RenderTexture(texture, float4{ float(srcRect.x),float(srcRect.y) , float(srcRect.w),float(srcRect.h) }, float4{ float(dstRect.x),float(dstRect.y) , float(dstRect.w),float(dstRect.h) }, isFlipped);
+}
+
+void Renderer::RenderRect(const SDL_Rect& rect, SDL_Color color) const
+{
+	SDL_SetRenderDrawColor(GetSDLRenderer(), color.r, color.g, color.b, color.a);
+	SDL_RenderDrawRect(GetSDLRenderer(), &rect);
+}
+void Renderer::RenderText(const std::string& text, const SDL_Rect& destRect, const std::string& font, SDL_Color color)const
+{
+	TTF_Font* TextFont = TTF_OpenFont(("../Data/" + font).c_str(), 24);
+	SDL_Surface* surfaceMessage = TTF_RenderText_Solid(TextFont, text.c_str(), color);
+	SDL_Texture* Message = SDL_CreateTextureFromSurface(GetSDLRenderer(), surfaceMessage);
+
+	SDL_RenderCopy(GetSDLRenderer(), Message, NULL, &destRect);
+
+	SDL_FreeSurface(surfaceMessage);
+	SDL_DestroyTexture(Message);
+
+}
+
+void Renderer::AddToRenderQueue(const Texture2D& texture, const SDL_Rect& src, const SDL_Rect& dst, const SDL_Point& center, float& rotation, float& depth, bool flipped)
 {
 	m_RenderQueue.push_back(RenderInfo{ texture, src, dst, center, rotation, depth, flipped });
 }
@@ -109,7 +133,7 @@ void Renderer::AddToRenderQueue(const Texture2D& texture, float x, float y, floa
 	center.x = static_cast<int>(src.w * 0.5f);
 	center.y = static_cast<int>(src.h * 0.5f);
 
-	AddToRenderQueue(texture, src, dst, center, rotation, depth);
+	AddToRenderQueue(texture, src, dst, center, rotation, depth , false);
 }
 
 void Renderer::RenderQueue()
@@ -117,7 +141,7 @@ void Renderer::RenderQueue()
 	// Sort Queue based on its depth value
 	auto depthSort = [](const RenderInfo& a, const RenderInfo& b)
 	{
-		return a.depth < b.depth;
+		return a.depth > b.depth;
 	};
 
 	std::sort(m_RenderQueue.begin(), m_RenderQueue.end(), depthSort);
@@ -127,6 +151,8 @@ void Renderer::RenderQueue()
 		SDL_RendererFlip flip = render.IsFlipped ? SDL_RendererFlip::SDL_FLIP_HORIZONTAL : SDL_RendererFlip::SDL_FLIP_NONE; // set flip 
 		//RenderTexture(render.sdl_Texture, &render.srcRect, &render.dstRect, render.IsFlipped);
 		SDL_RenderCopyEx(GetSDLRenderer(), render.sdl_Texture, &render.srcRect, &render.dstRect, render.rotation, &render.pivot, flip);
+		/*SDL_SetRenderDrawColor(GetSDLRenderer(), 255,0 , 255, 255);
+		SDL_RenderDrawPoint(GetSDLRenderer(), render.pivot.x, render.pivot.y);*/
 	}
 
 	m_RenderQueue.clear();

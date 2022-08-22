@@ -1,0 +1,206 @@
+﻿  Bullet.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\Bullet.cpp(45,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\Bullet.cpp(46,18): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\Bullet.cpp(56,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\Bullet.cpp(57,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  EnemyController.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\EnemyController.cpp(139,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\EnemyController.cpp(144,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  GameManager.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+  GameModeButton.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+  HealthComponent.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+  HighScore.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\HighScore.cpp(34,38): warning C4838: conversion from 'size_t' to 'int' requires a narrowing conversion
+  MovementComponent.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\MovementComponent.cpp(91,15): warning C4189: 'height': local variable is initialized but not referenced
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\MovementComponent.cpp(90,15): warning C4189: 'width': local variable is initialized but not referenced
+  PlayerControllerComponent.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+  Prefabs.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\Prefabs.cpp(32,13): warning C4189: 'kbID': local variable is initialized but not referenced
+  ScoreComponent.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+  SkipLevelButton.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+  TankComponent.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\TankComponent.cpp(73,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\TankComponent.cpp(127,19): warning C4456: declaration of 'tempColl' hides previous local declaration
+C:\Users\Yannick\Desktop\Tron-Retake\TronGame\TankComponent.cpp(105,7): message : see declaration of 'tempColl'
+  TronGame.cpp
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(45,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(206): message : see reference to class template instantiation 'glm::tvec2<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(46,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec2.hpp(47,22): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(45,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(227): message : see reference to class template instantiation 'glm::tvec3<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(46,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec3.hpp(47,25): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(45,28): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(272): message : see reference to class template instantiation 'glm::tvec4<T,P>' being compiled
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(46,29): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\glm\glm\detail\type_vec4.hpp(47,29): warning C4201: nonstandard extension used: nameless struct/union
+  Generating Code...
+  TronGame.vcxproj -> C:\Users\Yannick\Desktop\Tron-Retake\Debug\TronGame.exe
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2\lib\x86\SDL2.dll
+  1 File(s) copied
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_image\lib\x86\libjpeg-9.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_image\lib\x86\libpng16-16.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_image\lib\x86\libtiff-5.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_image\lib\x86\libwebp-7.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_image\lib\x86\SDL2_image.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_image\lib\x86\zlib1.dll
+  6 File(s) copied
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_ttf\lib\x86\libfreetype-6.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_ttf\lib\x86\SDL2_ttf.dll
+  2 File(s) copied
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_mixer-2.0.4\lib\x86\libFLAC-8.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_mixer-2.0.4\lib\x86\libmodplug-1.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_mixer-2.0.4\lib\x86\libmpg123-0.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_mixer-2.0.4\lib\x86\libogg-0.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_mixer-2.0.4\lib\x86\libopus-0.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_mixer-2.0.4\lib\x86\libopusfile-0.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_mixer-2.0.4\lib\x86\libvorbis-0.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_mixer-2.0.4\lib\x86\libvorbisfile-3.dll
+  C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2_mixer-2.0.4\lib\x86\SDL2_mixer.dll
+  9 File(s) copied

@@ -32,12 +32,12 @@ void SpriteComponent::Render()
 	SDL_Rect dst{};
 	dst.x = static_cast<int>(Position.x);
 	dst.y = static_cast<int>(Position.y);
-	dst.w = static_cast<int>(m_FrameRect.w * Scale.x);
-	dst.h = static_cast<int>(m_FrameRect.h * Scale.y);
+	dst.w = static_cast<int>(m_SpriteRect.w * Scale.x);
+	dst.h = static_cast<int>(m_SpriteRect.h * Scale.y);
 
 	SDL_Point Pivot{};
 	Pivot.x = static_cast<int>(dst.w * m_RotationPivot.x);
-	Pivot.x = static_cast<int>(dst.h * m_RotationPivot.y);
+	Pivot.y = static_cast<int>(dst.h * m_RotationPivot.y);
 
 	Renderer::GetInstance().AddToRenderQueue(*m_Texture, m_FrameRect, dst, Pivot, Rotation, Position.z, m_IsFlipped);
 
@@ -66,6 +66,13 @@ void SpriteComponent::SetSpriteRect(const SDL_Rect& rect)
 	m_FrameRect.h = m_SpriteRect.h / m_Rows;
 
 	m_NeedsUpdate = true;
+}
+void SpriteComponent::SetFrameRect(int x, int y, int width, int height)
+{
+	m_FrameRect.x = x;
+	m_FrameRect.y = y;
+	m_FrameRect.w = width;
+	m_FrameRect.h = height;
 }
 
 void SpriteComponent::SetColumnsRows(int col, int rows)

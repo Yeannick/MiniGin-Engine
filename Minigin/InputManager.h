@@ -1,5 +1,5 @@
 #pragma once
-#include <XInput.h>
+//#include <XInput.h>
 #include "Singleton.h"
 #include "Controller.h"
 #include "Command.h"
@@ -41,7 +41,7 @@ public:
 	bool ProcessInput();
 	void Update() const;
 
-	PlayerIdx AddPlayer();
+	PlayerIdx AddPlayer(bool kb = false);
 	void RemovePlayer(PlayerIdx idx);
 
 	bool IsPressed(Controller::ControllerButton button,PlayerIdx idx)const; // controller

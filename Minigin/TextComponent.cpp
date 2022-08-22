@@ -2,7 +2,7 @@
 #include "TextComponent.h"
 #include <SDL_ttf.h>
 #include "Renderer.h"
-
+#include "ResourceManager.h"
 
 TextComponent::TextComponent(const std::weak_ptr<GameObject>& owner, const std::string text, const std::shared_ptr<Font> font, const SDL_Color color):
 	BaseComponent(owner),
@@ -13,7 +13,11 @@ TextComponent::TextComponent(const std::weak_ptr<GameObject>& owner, const std::
 	if (!text.empty())
 		m_NeedsUpdate = true;
 }
-
+TextComponent::TextComponent(const std::weak_ptr<GameObject>& owner):BaseComponent(owner),m_Font(ResourceManager::GetInstance().LoadFont("Lingua.otf", 36)), m_TextTexture(nullptr), m_Color({ 255,255,255 })
+{
+		m_Text = "0";
+		m_NeedsUpdate = true;
+}
 void TextComponent::FixedUpdate()
 {
 }
@@ -22,6 +26,7 @@ void TextComponent::Update()
 {
 	if (m_NeedsUpdate)
 	{
+	
 		const auto surf = TTF_RenderText_Blended(m_Font->GetFont(), m_Text.c_str(), m_Color);
 		if (surf == nullptr)
 		{
@@ -48,7 +53,7 @@ void TextComponent::Render()
 	{
 
 		glm::vec3 pos = m_Owner.lock()->GetTransform().GetPosition();
-		Renderer::GetInstance().AddToRenderQueue(*m_TextTexture, pos.x, pos.y, 0, 0.01f);
+		Renderer::GetInstance().AddToRenderQueue(*m_TextTexture, pos.x, pos.y, 0, pos.z);
 		//Renderer::GetInstance().RenderTexture(*m_TextTexture, pos.x, pos.y);
 	}
 }

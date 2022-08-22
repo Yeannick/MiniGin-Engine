@@ -1,5 +1,6 @@
 #pragma once
 
+// floats
 struct float2
 {
 	float x, y;
@@ -20,3 +21,21 @@ struct float4
 {
 	float x, y, z, w;
 };
+
+enum class MovementDirection
+{
+	Left,Right,Up,Down,
+	Horizontal,Vertical
+};
+
+
+// Physics
+
+// Events
+//enum EventType
+//{
+//	SCOREGAINED,
+//	LOSTLIFE,
+//	TELEPORTED,
+//	OVERLAPPLAYER
+//};

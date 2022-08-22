@@ -2,12 +2,14 @@
 #include "RenderComponent.h"
 #include "Texture2D.h"
 #include "BaseComponent.h"
+#include "DataTypes.h"
+#include "SDL.h"
 
 
 class SpriteComponent : public RenderComponent
 {
 public:
-	SpriteComponent(const std::weak_ptr<GameObject>& owner, const float2& pivot = float2(0.0f, 0.0f), const float2& rotationPivot = float2(0.5f, 0.5f));
+	SpriteComponent(const std::weak_ptr<GameObject>& owner, const float2& pivot = float2{ 0.0f, 0.0f }, const float2& rotationPivot = float2{ 0.5f, 0.5f });
 	virtual ~SpriteComponent() = default;
 
 	SpriteComponent(const SpriteComponent & other) = delete;
@@ -25,6 +27,7 @@ public:
 
 	void SetSpriteRect(int x, int y, int width, int height);
 	void SetSpriteRect(const SDL_Rect& rect);
+	void SetFrameRect(int x, int y, int width, int height);
 
 	void SetColumnsRows(int col, int rows);
 	void SetColumns(int col);

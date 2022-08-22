@@ -2,6 +2,7 @@
 #include "Transform.h"
 #include "BaseComponent.h"
 #include <vector>
+#include <string>
 
 class Scene;
 
@@ -27,7 +28,11 @@ public:
 	bool IsMarkedForDestruction() const;
 	
 	void SetPosition(float x, float y);
+	void SetLocalPosition(float x, float y);
 	void SetPosition(float x, float y , float z);
+	void SetLocalPosition(float x, float y , float z);
+	void SetRotation(float angle);
+	void SetScale(float x, float y);
 	const Transform& GetTransform() const;
 
 	void SetName(const std::string& name);
@@ -89,8 +94,11 @@ public:
 
 	size_t GetChildCount() const;
 	GameObject* GetChildAt(int index) const;
+	GameObject* GetChild(std::string name) const;
+	std::vector<GameObject*> GetChildren();
 
 	void RemoveChild(int index);
+	void RemoveChild(GameObject* go);
 	void AddChild(GameObject* go);
 
 private:

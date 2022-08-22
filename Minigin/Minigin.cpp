@@ -5,12 +5,17 @@
 #include "SceneManager.h"
 #include "Renderer.h"
 #include "ResourceManager.h"
+#include "PhysicsManager.h"
 #include "GameObject.h"
 #include "TextComponent.h"
 #include "SpriteComponent.h"
+#include "FPSComponent.h"
 #include "Scene.h"
 #include "GameTime.h"
+#include "BoxCollider2D.h"
+#include "RigidBody2D.h"
 #include <chrono>
+#include "SoundServiceLocator.h"
 
 
 using namespace std;
@@ -52,6 +57,7 @@ void Minigin::Initialize()
 	}
 
 	Renderer::GetInstance().Init(m_Window);
+	ResourceManager::GetInstance().Init("../Data/");
 }
 
 /**
@@ -59,32 +65,12 @@ void Minigin::Initialize()
  */
 void Minigin::LoadGame() const
 {
-	auto& scene = SceneManager::GetInstance().CreateScene("Demo");
-
 	
-
-	auto bground = std::make_shared<GameObject>();
-
-	bground->AddComponent<SpriteComponent>(std::make_shared<SpriteComponent>(bground));
-	bground->SetPosition(0, 0, 0.2f);
-	auto sprite = bground->GetComponent<SpriteComponent>();
-	sprite.lock()->SetTexture("background.jpg");
-	sprite.lock()->SetSpriteRect(0,0,640,480);
-	scene.Add(bground);
-	/*auto font = ResourceManager::GetInstance().LoadFont("Lingua.otf", 36);
-	auto to = std::make_shared<TextObject>("Programming 4 Assignment", font);
-	to->SetPosition(80, 20);
-	scene.Add(to);*/
-	auto go = std::make_shared<GameObject>();
-	auto font = ResourceManager::GetInstance().LoadFont("Lingua.otf", 36);
-	auto color = SDL_Color{ 255,255,255,255 };
-	go->AddComponent<TextComponent>(std::make_shared<TextComponent>(go, "Programming 4 Assignment", font, color));
-
-	scene.Add(go);
 }
 
 void Minigin::Cleanup()
 {
+	SoundServiceLocator::FreeSoundSystem();
 	Renderer::GetInstance().Destroy();
 	SDL_DestroyWindow(m_Window);
 	m_Window = nullptr;
@@ -93,12 +79,12 @@ void Minigin::Cleanup()
 
 void Minigin::Run()
 {
-	Initialize();
+	//Initialize();
 
 	// tell the resource manager where he can find the game data
-	ResourceManager::GetInstance().Init("../Data/");
+	
 
-	LoadGame();
+	//LoadGame();
 
 	{
 		auto& renderer = Renderer::GetInstance();
@@ -132,11 +118,12 @@ void Minigin::Run()
 
 			renderer.Render();
 
-			auto sleepTime = std::chrono::duration_cast<std::chrono::duration<float>>(currentTime + milliseconds(MsPerFrame) - high_resolution_clock::now());
-			std::this_thread::sleep_for(sleepTime);
+			//auto sleepTime = std::chrono::duration_cast<std::chrono::duration<float>>(currentTime + milliseconds(MsPerFrame) - high_resolution_clock::now());
+			//std::this_thread::sleep_for(sleepTime);
 
 
 		}
+		SoundServiceLocator::GetSoundSystem().StopSoundQueue();
 	}
 
 	Cleanup();
