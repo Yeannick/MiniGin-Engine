@@ -1,34 +1,6 @@
-﻿  MiniginPCH.cpp
-  JsonFileReader.cpp
-  PhysicsManager.cpp
-  RigidBody2D.cpp
-  SoundClip.cpp
-  AudioLibrary.cpp
-  BoxCollider2D.cpp
-  Command.cpp
-  Controller.cpp
-  Font.cpp
-  FPSComponent.cpp
-  GameObject.cpp
-  GameTime.cpp
-  InputManager.cpp
+﻿  JsonFileReader.cpp
   Minigin.cpp
-  RenderComponent.cpp
-  Renderer.cpp
-  ResourceManager.cpp
-  Scene.cpp
-  SceneManager.cpp
-  SoundServiceLocator.cpp
-  Generating Code...
-  Compiling...
-  SoundSystem.cpp
-  SpriteComponent.cpp
-  Subject.cpp
-  TextComponent.cpp
-  Texture2D.cpp
-  Transform.cpp
-  UIButton.cpp
-  UiManager.cpp
+  PhysicsManager.cpp
   Generating Code...
   Minigin.vcxproj -> C:\Users\Yannick\Desktop\Tron-Retake\x64\Debug\Minigin.lib
   C:\Users\Yannick\Desktop\Tron-Retake\3rdParty\SDL2\lib\x64\SDL2.dll

@@ -5,18 +5,7 @@
 
 
 
-struct Ray
-{
-	glm::vec3 Direction{ 0,0,0 };
-	glm::vec3 HitPoint{ 0,0,0 };
-	float Distance = 0;
 
-	GameObject* pHitObject = nullptr;
-	int MaxDistance = 1000;
-
-	Ray() = default;
-	Ray(const glm::vec3 direction, int maxDist) :Direction{ direction }, MaxDistance(maxDist){}
-};
 
 class PhysicsManager final : public Singleton<PhysicsManager>
 {
@@ -28,7 +17,7 @@ class PhysicsManager final : public Singleton<PhysicsManager>
 	PhysicsManager& operator=(PhysicsManager&& other) noexcept = delete;
 
 public:
-	Ray RayCast(const glm::vec3& startPosition, const glm::vec3& direction, GameObject* pGO = nullptr, const int maxDistance = INT_MAX);
+	
 
 	void AddBoxCollider2D(std::shared_ptr<BoxCollider2D> box);
 	void RemoveBoxCollider2D(std::shared_ptr<BoxCollider2D> box);

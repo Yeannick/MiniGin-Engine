@@ -3,60 +3,6 @@
 #include "GameObject.h"
 #include <algorithm>
 
-Ray PhysicsManager::RayCast(const glm::vec3& startPosition, const glm::vec3& direction, GameObject* pGO, const int maxDistance)
-{
-    const auto Direction = glm::normalize(direction);
-
-    Ray ray = Ray(Direction, maxDistance);
-    ray.HitPoint = startPosition;
-
-    std::vector<BoxCollider2D*> colliders;
-
-    if (pGO)
-    {
-        std::vector<GameObject*> objects{ pGO };
-		size_t checkedCount= 0 ;
-
-		while (objects.size() == checkedCount)
-		{
-			for (const auto& obj : objects)
-			{
-				if (obj->GetChildCount() != 0)
-				{
-					const auto children{ obj->GetChildren() };
-					for (const auto& child : children)
-					{
-						objects.emplace_back(child);
-					}
-				}
-				++checkedCount;
-			}
-		}
-		for (const auto& obj : objects)
-		{
-			const auto BoxComp = obj->GetComponent<BoxCollider2D>();
-			if (BoxComp.lock())
-				colliders.push_back(BoxComp.lock().get());
-		}
-	}
-
-
-	while (ray.MaxDistance >= glm::distance(ray.HitPoint, startPosition))
-	{
-		ray.HitPoint += Direction;
-		for (const auto& col : m_BoxColliders)
-		{
-			if (IsPointInRect(col, colliders, ray.HitPoint))
-			{
-				ray.Distance = glm::distance(ray.HitPoint, startPosition);
-				ray.pHitObject = col->GetGameObject().get();
-
-				return ray;
-			}
-		}
-	}
-	return ray;
-}
 
 void PhysicsManager::AddBoxCollider2D(std::shared_ptr<BoxCollider2D> box)
 {
